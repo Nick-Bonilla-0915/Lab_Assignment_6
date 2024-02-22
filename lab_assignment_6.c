@@ -2,19 +2,30 @@
 
 int search(int numbers[], int low, int high, int value) 
 {
+	//Making variables
 	int mid, found = 0;
 
+	//Making sure value is still between
 	if(low <= high)
 	{
+		//Changing middle to be between current low and high
 		mid = (low + high)/2;
+
+		//Checking if the value is above or below mid
 		if(value < numbers[mid] && found == 0)
 		{
+			//Recursion
 			return search(numbers, low, mid-1, value);
 		}
+
+		//Checking if value is above mid
 		else if(value > numbers[mid] && found == 0)
 		{
+			//Recursion
 			return search(numbers, mid + 1, high, value);
 		}
+
+		//Checking if value found
 		else if(value == numbers[mid] && found == 0)
 		{
 			found == 1;
@@ -25,6 +36,7 @@ int search(int numbers[], int low, int high, int value)
 	return -1;
 }
 
+//Pre-made function
 void printArray(int numbers[], int sz)
 {
 	int i;
@@ -36,6 +48,7 @@ void printArray(int numbers[], int sz)
 	printf("\n");
 }
 
+//Main function, didn't touch
 int main(void)
 {
 	int i, numInputs;
