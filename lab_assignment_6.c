@@ -1,5 +1,10 @@
 #include <stdio.h>
 
+/*
+	Author: Nicholas Bonilla
+	Purpose: Binary search using recursion
+	*/
+
 int search(int numbers[], int low, int high, int value) 
 {
 	//Making variables
